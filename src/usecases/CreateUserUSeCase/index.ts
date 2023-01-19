@@ -1,5 +1,8 @@
 import { CreateUserUseCase } from "./createUserUseCase";
+import { PrismaUserRepository } from "../../repositories/prisma/PrismaUserRepository"
 
-const createUserUseCase = new CreateUserUseCase()
+
+const prismaUserRepository = new PrismaUserRepository()
+const createUserUseCase = new CreateUserUseCase(prismaUserRepository)
 
 export { createUserUseCase }
