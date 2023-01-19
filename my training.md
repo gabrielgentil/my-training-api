@@ -3,6 +3,7 @@
 # v1
 ## Funcionalidades
   - Cadastro de usuários
+  - Autenticação usuário
   - Criação de categorias
   - Criação de treinos
   - Criação semana de treino com validade ? 
