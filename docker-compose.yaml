@@ -9,6 +9,26 @@ services:
     volumes:
       - .:/usr/src/app
     container_name: mytraining-api
+    env_file:
+      - .env
+    depends_on:
+      - db
     ports:
       - "3000:3000"
       - "9230:9229"
+
+  db:
+    image: mysql:5.7
+    container_name: mytraining-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+  my-db:
