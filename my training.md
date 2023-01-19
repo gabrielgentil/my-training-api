@@ -14,6 +14,7 @@
 
   - Criar aba para treinos feitos por personal
   - Push notification para personal
+  - Barra de progresso
 
                            
 

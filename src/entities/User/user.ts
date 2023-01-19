@@ -1,4 +1,5 @@
 import { uuid } from 'uuidv4'
+import bcrypt from 'bcryptjs'
 
 export class User {
 
@@ -14,5 +15,8 @@ export class User {
     if (!id) {
       this.id = uuid();
     }
+
+    const saltRounds = 10
+    this.password = bcrypt.hashSync(props.password, saltRounds);
   }
 }
