@@ -8,7 +8,10 @@ export class PrismaCategoryRepository implements ICategoryRepository {
     return prisma.categorys.findFirst({
       where: {
         userId
-      }
+      },
+      include: {
+        trainings: true
+      },
     })
   }
 

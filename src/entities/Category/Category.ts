@@ -1,5 +1,5 @@
 import { uuid } from 'uuidv4'
-import { ICreateCategoryRequestDTO } from '../../usecases/CreateCategoryUseCase/createCategoryDTO';
+import { ICreateCategoryRequestDTO } from '../../usecases/CategoryUseCase/CreateCategoryUseCase/createCategoryDTO';
 
 export class Category {
 

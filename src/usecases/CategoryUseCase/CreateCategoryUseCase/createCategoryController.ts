@@ -1,6 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { createCategoryUseCase } from "../../usecases/CreateCategoryUseCase";
-
+import { createCategoryUseCase } from "../../CategoryUseCase/CreateCategoryUseCase";
 
 interface IBody {
   name: string
@@ -23,3 +22,4 @@ export const handle = async (request: FastifyRequest, response: FastifyReply) =>
     })
   }
 }
+export default { handle }

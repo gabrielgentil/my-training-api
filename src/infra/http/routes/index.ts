@@ -1,6 +1,8 @@
 const apiRoutes = async (app: any) => {
   app.register(require('./user'), { prefix: 'user' })
   app.register(require('./category'), { prefix: 'category' })
+  app.register(require('./training'), { prefix: 'training' })
+
 
   app.get("/", {
     // preValidation: [app.authenticate]

@@ -1,5 +1,5 @@
-import { Category } from "../../entities/Category/Category";
-import { ICategoryRepository } from "../../repositories/ICategoryRepository";
+import { Category } from "../../../entities/Category/Category";
+import { ICategoryRepository } from "../../../repositories/ICategoryRepository";
 import { ICreateCategoryRequestDTO } from "./createCategoryDTO"
 import { BadRequest } from 'http-errors'
 

@@ -1,18 +1,19 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { createUserUseCase } from "../../usecases/CreateUserUseCase";
-
+import { createTrainingUseCase } from "../../usecases/TrainingUseCase";
 
 interface IBody {
   name: string
-  email: string
-  password: string
+  repetitions: string
+  series: string
+  categorysId: string
 }
 
 export const handle = async (request: FastifyRequest, response: FastifyReply) => {
   try {
-    const { name, email, password } = request.body as IBody;
+    // const { name, repetitions, series, categorysId } = request.body as IBody;
+    const trainings = request.body as IBody[]
 
-    await createUserUseCase.execute({ name, email, password })
+    await createTrainingUseCase.execute(trainings)
 
     return response.code(201).send();
 
