@@ -1,4 +1,6 @@
 import fastifyPlugin from 'fastify-plugin';
+import { FastifyReply, FastifyRequest } from "fastify";
+
 
 const fp = fastifyPlugin(async function (fastify, _opts) {
   fastify.register(require('@fastify/jwt'), {
@@ -13,7 +15,7 @@ const fp = fastifyPlugin(async function (fastify, _opts) {
     }
   })
 
-  fastify.decorate('authenticate', async function (request, reply) {
+  fastify.decorate('authenticate', async function (request: FastifyRequest, reply: FastifyReply) {
     try {
       await request.jwtVerify()
     } catch (err) {
