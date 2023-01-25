@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { createUserUseCase } from "../../usecases/CreateUserUSeCase";
+import { createUserUseCase } from "../../usecases/CreateUserUseCase";
 
 
 interface IBody {
